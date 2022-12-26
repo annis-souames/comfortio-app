@@ -1,0 +1,530 @@
+<template>
+    <div id = "map">
+        <svg
+            width="175mm"
+            height="125mm"
+            version="1.1"
+            viewBox="0 0 175 125"
+            id="svg500"
+        >
+            <defs
+                id="defs504">
+                <rect
+                    x="352.13768"
+                    y="245.61916"
+                    width="50.12636"
+                    height="13.15817"
+                    id="rect862" />
+                <rect
+                    x="301.38474"
+                    y="241.23311"
+                    width="149.12593"
+                    height="38.847929"
+                    id="rect856" />
+                <rect
+                    x="23.183442"
+                    y="97.746402"
+                    width="97.746402"
+                    height="18.170806"
+                    id="rect578" />
+                <rect
+                    x="58.271894"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508" />
+                <rect
+                    x="58.271893"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508-8" />
+                <rect
+                    x="58.271893"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508-5" />
+                <rect
+                    x="58.271893"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508-6" />
+                <rect
+                    x="58.271893"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508-4" />
+                <rect
+                    x="58.271893"
+                    y="30.702396"
+                    width="119.0501"
+                    height="24.4366"
+                    id="rect508-3" />
+            </defs>
+            <sodipodi:namedview
+                id="namedview502"
+                pagecolor="#ffffff"
+                bordercolor="#000000"
+                borderopacity="0.25"
+                inkscape:showpageshadow="2"
+                inkscape:pageopacity="0.0"
+                inkscape:pagecheckerboard="0"
+                inkscape:deskcolor="#d1d1d1"
+                inkscape:document-units="mm"
+                showgrid="false"
+                inkscape:zoom="1.5959667"
+                inkscape:cx="330.83398"
+                inkscape:cy="236.22047"
+                inkscape:window-width="1920"
+                inkscape:window-height="986"
+                inkscape:window-x="-11"
+                inkscape:window-y="-11"
+                inkscape:window-maximized="1"
+                inkscape:current-layer="svg500" />
+            <g
+                transform="translate(70.8 -14.7)"
+                id="g498">
+                <g
+                    fill="none"
+                    stroke="#000"
+                    id="g480">
+                    <path
+                        d="m-68.8 66.5v-49.8h171v121h-64"
+                        stop-color="#000000"
+                        stroke-width="4.05"
+                        id="path452" />
+                    <path
+                        d="m-68.8 87.8v49.8h85.3"
+                        stop-color="#000000"
+                        stroke-width="4.05"
+                        id="path454" />
+                    <g
+                        stroke-width="1.9"
+                        id="g478">
+                        <path
+                            d="m-68.8 52.3h21.3"
+                            id="path456" />
+                        <path
+                            d="m-26.1 52.3h14.2v-35.6"
+                            id="path458" />
+                        <path
+                            d="m-11.9 52.3h14.2v14.2"
+                            id="path460" />
+                        <path
+                            d="m2.32 87.8v21.3h-28.4"
+                            id="path462" />
+                        <path
+                            d="m-47.5 109h-21.3"
+                            id="path464" />
+                        <path
+                            d="m2.32 109v28.4"
+                            id="path466" />
+                        <path
+                            d="m2.32 52.3h14.2"
+                            id="path468" />
+                        <path
+                            d="m37.9 52.3h14.2v-35.6"
+                            id="path470" />
+                        <path
+                            d="m52.1 52.3v14.2"
+                            id="path472" />
+                        <path
+                            d="m102 87.8h-14.2"
+                            id="path474" />
+                        <path
+                            d="m66.3 87.8h-14.2v49.8"
+                            id="path476" />
+                    </g>
+                </g>
+                <g
+                    id="g496">
+                    <rect
+                        fill-opacity="0.5"
+                        fill="green"
+                        x="-68.8"
+                        y="16.7"
+                        width="56.9"
+                        height="35.6"
+                        @click="$emit('select-room',{id:1})"
+                        id="rect482" />
+                    <rect
+                        fill-opacity="0"
+                        x="-11.9"
+                        y="16.7"
+                        width="64"
+                        height="35.6"
+                        @click="$emit('select-room',{id:2})"
+                        id="rect484" />
+                    <rect
+                        fill-opacity="0"
+                        x="52.1"
+                        y="16.7"
+                        width="49.8"
+                        height="71.1"
+                        @click="$emit('select-room',{id:3})"
+                        id="rect486" />
+                    <rect
+                        fill-opacity="0"
+                        x="-68.8"
+                        y="52.3"
+                        width="71.1"
+                        height="56.9"
+                        @click="$emit('select-room',{id:4})"
+                        id="rect488" />
+                    <rect
+                        fill-opacity="0"
+                        x="2.32"
+                        y="52.3"
+                        width="49.8"
+                        height="85.3"
+                        @click="$emit('select-room',{id:5})"
+                        id="rect490" />
+                    <rect
+                        fill-opacity="0"
+                        x="52.1"
+                        y="87.8"
+                        width="49.8"
+                        height="49.8"
+                        @click="$emit('select-room',{id:6})"
+                        id="rect492" />
+                    <rect
+                        fill-opacity="0"
+                        x="-68.8"
+                        y="109"
+                        width="71.1"
+                        height="28.4"
+                        @click="$emit('select-room',{id:7})"
+                        id="rect494" />
+                </g>
+            </g>
+            <text
+                xml:space="preserve"
+                transform="scale(0.26458333)"
+                id="text506"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508);fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan970"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan968">Room 110</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="19.893898"
+                y="19.728117"
+                id="text514"><tspan
+                        sodipodi:role="line"
+                        id="tspan512"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="19.893898"
+                        y="19.728117">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="18.070292"
+                y="23.706896"
+                id="text518"><tspan
+                        sodipodi:role="line"
+                        id="tspan516"
+                        style="stroke-width:0.264583"
+                        x="18.070292"
+                        y="23.706896">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="18.070292"
+                y="27.675646"
+                id="tspan520" /></text>
+            <text
+                xml:space="preserve"
+                transform="scale(0.26458333)"
+                id="text576"
+                style="font-size:12px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect578);fill:#000000" />
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="21.220158"
+                y="28.017241"
+                id="text584"><tspan
+                        sodipodi:role="line"
+                        id="tspan582"
+                        style="stroke-width:0.264583"
+                        x="21.57905"
+                        y="28.017241">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,59.490135,-1.0252205)"
+                id="text506-4"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508-8);fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan974"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan972">Room 111</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="79.384033"
+                y="18.702896"
+                id="text514-8"><tspan
+                        sodipodi:role="line"
+                        id="tspan512-2"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="79.384033"
+                        y="18.702896">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="77.560425"
+                y="22.681675"
+                id="text518-0"><tspan
+                        sodipodi:role="line"
+                        id="tspan516-2"
+                        style="stroke-width:0.264583"
+                        x="77.560425"
+                        y="22.681675">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="77.560425"
+                y="26.650425"
+                id="tspan520-9" /></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="80.710297"
+                y="26.992022"
+                id="text584-0"><tspan
+                        sodipodi:role="line"
+                        id="tspan582-2"
+                        style="stroke-width:0.264583"
+                        x="81.069191"
+                        y="26.992022">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,9.2580393,46.554355)"
+                id="text506-3"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508-5);display:inline;fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan978"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan976">Room 113</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="29.151937"
+                y="66.282471"
+                id="text514-2"><tspan
+                        sodipodi:role="line"
+                        id="tspan512-8"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="29.151937"
+                        y="66.282471">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="27.328331"
+                y="70.261253"
+                id="text518-4"><tspan
+                        sodipodi:role="line"
+                        id="tspan516-5"
+                        style="stroke-width:0.264583"
+                        x="27.328331"
+                        y="70.261253">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="27.328331"
+                y="74.230003"
+                id="tspan520-3" /></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="30.312414"
+                y="74.240036"
+                id="text584-8"><tspan
+                        sodipodi:role="line"
+                        id="tspan582-5"
+                        style="stroke-width:0.264583"
+                        x="30.671307"
+                        y="74.240036">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,119.5034,14.226769)"
+                id="text506-30"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508-6);display:inline;fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan982"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan980">Room 112</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="139.39729"
+                y="33.954887"
+                id="text514-3"><tspan
+                        sodipodi:role="line"
+                        id="tspan512-1"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="139.39729"
+                        y="33.954887">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="137.57368"
+                y="37.933666"
+                id="text518-2"><tspan
+                        sodipodi:role="line"
+                        id="tspan516-3"
+                        style="stroke-width:0.264583"
+                        x="137.57368"
+                        y="37.933666">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="137.57368"
+                y="41.902416"
+                id="tspan520-0" /></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="140.55779"
+                y="42.078228"
+                id="text584-4"><tspan
+                        sodipodi:role="line"
+                        id="tspan582-3"
+                        style="stroke-width:0.264583"
+                        x="140.91667"
+                        y="42.078228">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,5.776607,89.160456)"
+                id="text506-8"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508-4);display:inline;fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan986"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan984">Room 114</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="25.670507"
+                y="108.88857"
+                id="text514-7"><tspan
+                        sodipodi:role="line"
+                        id="tspan512-9"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="25.670507"
+                        y="108.88857">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="23.846899"
+                y="112.86735"
+                id="text518-3"><tspan
+                        sodipodi:role="line"
+                        id="tspan516-54"
+                        style="stroke-width:0.264583"
+                        x="23.846899"
+                        y="112.86735">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="23.846899"
+                y="116.8361"
+                id="tspan520-7" /></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="26.996767"
+                y="116.84613"
+                id="text584-9"><tspan
+                        sodipodi:role="line"
+                        id="tspan582-52"
+                        style="stroke-width:0.264583"
+                        x="27.355659"
+                        y="116.84613">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,119.00605,76.726769)"
+                id="text506-6"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect508-3);display:inline;fill:#000000"><tspan
+                        x="73.203195"
+                        y="49.369762"
+                        id="tspan990"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan988">Room 108</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="138.89995"
+                y="96.454887"
+                id="text514-6"><tspan
+                        sodipodi:role="line"
+                        id="tspan512-3"
+                        style="font-size:3.175px;stroke-width:0.264583"
+                        x="138.89995"
+                        y="96.454887">Temperature : 23°C</tspan></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="137.07634"
+                y="100.43366"
+                id="text518-27"><tspan
+                        sodipodi:role="line"
+                        id="tspan516-23"
+                        style="stroke-width:0.264583"
+                        x="137.07634"
+                        y="100.43366">Humidty : 38%: </tspan><tspan
+                sodipodi:role="line"
+                style="stroke-width:0.264583"
+                x="137.07634"
+                y="104.40241"
+                id="tspan520-30" /></text>
+            <text
+                xml:space="preserve"
+                style="font-size:3.175px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+                x="140.2262"
+                y="104.41245"
+                id="text584-6"><tspan
+                        sodipodi:role="line"
+                        id="tspan582-6"
+                        style="stroke-width:0.264583"
+                        x="140.58508"
+                        y="104.41245">Luminosity : 400 LUX </tspan></text>
+            <text
+                xml:space="preserve"
+                transform="matrix(0.26458333,0,0,0.26458333,-1.3262599,7.2944297)"
+                id="text854"
+                style="font-size:21.3333px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:center;white-space:pre;shape-inside:url(#rect856);fill:#000000"><tspan
+                        x="340.75461"
+                        y="259.89906"
+                        id="tspan994"><tspan
+                            style="font-weight:bold;-inkscape-font-specification:'Calibri Bold'"
+                            id="tspan992">Hallway</tspan></tspan></text>
+            <text
+                xml:space="preserve"
+                transform="scale(0.26458333)"
+                id="text860"
+                style="fill:#000000;text-align:center;font-size:12px;-inkscape-font-specification:Calibri;font-family:Calibri;white-space:pre;shape-inside:url(#rect862)" />
+        </svg>
+
+    </div>
+
+</template>
+
+<script>
+export default {
+    name: "Floorplan",
+    data(){
+        return {
+            rooms: []
+        }
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
