@@ -45,7 +45,7 @@ export default {
 
 
         const serie = ref(props.data);
-        console.log(props.title)
+        // console.log(props.title)
 
         const option = ref({
             series: [
@@ -89,7 +89,7 @@ export default {
                         }
                     },
                     axisLabel: {
-                        distance: -20,
+                        distance: -10,
                         color: '#999',
                         fontSize: 20
                     },

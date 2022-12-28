@@ -1,8 +1,9 @@
 <script>
 import Floorplan from './Floorplan.vue'
-import RoomDetails from "./RoomDetails";
+import RoomDetails from "./RoomDetails.vue";
+import RoomDetails2 from "./RoomDetails2.vue";
 export default {
-    components: {RoomDetails, Floorplan},
+    components: {RoomDetails, RoomDetails2, Floorplan},
     data() {
         return {
             count: 0,
@@ -49,7 +50,7 @@ export default {
         }
     },
     methods:{
-        setSelectedRoom(payload){
+        setSelectedRoom(payload) {
             this.selectedRoom = this.rooms.filter(room => {
                 return room.id === payload.id
             })[0]
@@ -60,25 +61,25 @@ export default {
 </script>
 
 <template>
-    <div class = "w-full flex justify-content-evenly">
+    <div class = "w-full flex justify-content-evenly bg-white">
         <aside class="w-64 mr-6" aria-label="Sidebar" v-bind:class="{'reveal-menu':showFilterMenu, 'hide-menu': (showFilterMenu == false)}">
-            <div class="h-full py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
+            <div class="h-full py-4 px-3 bg-gray-50 rounded">
                 <ul class="space-y-2">
                     <li>
-                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Temperature</label>
-                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900">Temperature</label>
+                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                     </li>
                     <li>
-                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Humidity</label>
-                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900">Humidity</label>
+                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                     </li>
                     <li>
-                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Luminosity</label>
-                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900">Luminosity</label>
+                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                     </li>
                     <li>
-                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Other parameter</label>
-                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                        <label for="steps-range" class="block mb-2 text-sm font-bold text-gray-900">Other parameter</label>
+                        <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                     </li>
 
                 </ul>
@@ -108,11 +109,11 @@ export default {
             <div v-if="!showRoomDetails" class = "flex justify-center align-items-center">
                 <Floorplan v-on:select-room="setSelectedRoom"/>
             </div>
-        <RoomDetails
-            v-if = "showRoomDetails"
+        <RoomDetails2
             :room = "selectedRoom"
+            :show = "showRoomDetails"
             v-on:close-modal = "showRoomDetails = false"
-        ></RoomDetails>
+        ></RoomDetails2>
         </div>
 
     </div>
