@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-row gap-0 items-center justify-center w-[25rem] h-[20rem]">
+    <div class="flex flex-row gap-10 items-center justify-center w-fit h-fit">
         <div class="relative">
-            <img class="absolute" src="../../../thermometer-gray.webp" width="200"/>
-            <img class="image" :style="cssProps" src="../../../thermometer.webp" width="200"/>
+            <img class="absolute" src="../../../thermometer-gray.webp" width="80"/>
+            <img class="image" :style="cssProps" src="../../../thermometer.webp" width="80"/>
         </div>
 
-        <h1 :style="cssProps" v-if="value != null" class="text w-[10rem] text-5xl font-bold">{{value}} °C</h1>
+        <h1 :style="cssProps" v-if="value != null" class="text text-4xl font-bold w-[6rem]">{{value}}°C</h1>
     </div>
 </template>
 

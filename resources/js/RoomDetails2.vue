@@ -41,13 +41,37 @@
                     </template>
                 </PropDetails>
 
-                <PropDetails>
-                    
+                <PropDetails title="Light">
+                    <template v-slot:chart1>
+                        <LightIndicator value="30"/>
+                    </template>
+
+                    <template v-slot:chart2>
+                        <LineChart
+                            title="Light" units="%"
+                            color="#58508D"
+                            :data = "[38,43,64,40,37,50,60.5]"
+                        ></LineChart>
+                    </template>
+                </PropDetails>
+
+                <PropDetails title="Sound">
+                    <template v-slot:chart1>
+                        <SoundIndicator value="80"/>
+                    </template>
+
+                    <template v-slot:chart2>
+                        <LineChart
+                            title="Sound" units="%"
+                            color="#58508D"
+                            :data = "[38,43,64,40,37,50,60.5]"
+                        ></LineChart>
+                    </template>
                 </PropDetails>
             </div>
 
-            <div class="flex flex-grow items-center justify-center text-center">
-                <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Take action</button>
+            <div class="flex flex-grow items-center justify-center text-center border-t border-black">
+                <button class="modal-close px-4 bg-blue-500 p-3 rounded-lg text-white hover:bg-blue-400 transition ease-in-out duration-150">Take action</button>
             </div>
 
         </div>
@@ -58,12 +82,14 @@
 import LineChart from "./charts/LineChart.vue";
 import TempGauge from "./charts/TempGauge.vue";
 import PropDetails from "./PropDetails.vue";
-import HumidityIndicator from "./charts/HumidityIndicator.vue";
 import Thermometer from "./charts/Thermometer.vue";
+import HumidityIndicator from "./charts/HumidityIndicator.vue";
+import LightIndicator from "./charts/LightIndicator.vue";
+import SoundIndicator from "./charts/SoundIndicator.vue";
 
 export default {
     name: "RoomDetails2",
-    components: { TempGauge, LineChart, HumidityIndicator, Thermometer, PropDetails },
+    components: { TempGauge, LineChart, HumidityIndicator, Thermometer, LightIndicator, SoundIndicator, PropDetails },
     props: [
         'room', 
         'show',

@@ -1,14 +1,14 @@
 <template>
-    <div @wheel.prevent @touchmove.prevent @scroll.prevent class="flex flex-col items-center border border-black rounded-sm m-3 w-[27rem] h-[27rem] bg-white relative overflow-x-hidden no-scrollbar">
-        <p class="mt-2">
+    <div @wheel.prevent @touchmove.prevent @scroll.prevent class="flex flex-col items-center jufisty-center content-center border border-black rounded-sm m-3 w-[27rem] h-[27rem] bg-white relative overflow-x-hidden no-scrollbar">
+        <p class="text-xl mt-5 font-bold">
             {{title}}
         </p>
 
-        <div class="relative inline-block">
-            <div class="chart1 absolute top-0 left-0" :class='show_chart1 ? "active" : ""'>
+        <div class="relative h-3/4 flex items-center justify-center">
+            <div class="chart1 absolute" :class='show_chart1 ? "active" : ""'>
                 <slot name="chart1"></slot>
             </div>
-            <div class="chart2 top-0 left-0" :class='show_chart1 ? "" : "active"'>
+            <div class="chart2" :class='show_chart1 ? "" : "active"'>
                 <slot name="chart2"></slot>
             </div>
         </div>

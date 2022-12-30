@@ -1,17 +1,17 @@
 <template>
-    <div class="flex flex-row gap-7 items-center justify-center w-fit h-fit">
+    <div class="flex flex-row gap-10 items-center justify-center w-fit h-fit">
         <div class="relative">
-            <img class="absolute" src="../../../water-drop-gray.webp" width="120"/>
-            <img class="image" :style="cssProps" src="../../../water-drop.webp" width="120"/>
+            <img class="absolute" src="../../../lightbulb-gray.webp" width="150"/>
+            <img class="image" :style="cssProps" src="../../../lightbulb.webp" width="150"/>
         </div>
 
-        <h1 v-if="value != null" class="text-4xl text-blue-900 font-bold w-[6rem]">{{value}}%</h1>
+        <h1 :style="cssProps" v-if="value != null" class="text-4xl font-bold w-[6rem]">{{value}}Cd</h1>
     </div>
 </template>
 
 <script>
 export default {
-    name: "HumidityIndicator",
+    name: "LightIndicator",
     components: {},
     props: [
         'value',
@@ -24,7 +24,7 @@ export default {
     computed: {
         cssProps() {
             return {
-                '--percentage': (100 - this.value) + "%",
+                '--percentage': Math.min(Math.max((100 - this.value), 0), 100) + "%",
             }
         }
     }

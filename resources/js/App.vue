@@ -46,7 +46,8 @@ export default {
             ],
             selectedRoom: null,
             showFilterMenu: false,
-            showRoomDetails: false
+            showRoomDetails: false,
+            best_room_id: 2,
         }
     },
     methods:{
@@ -55,7 +56,7 @@ export default {
                 return room.id === payload.id
             })[0]
             this.showRoomDetails = true
-        }
+        },
     }
 }
 </script>
@@ -106,8 +107,12 @@ export default {
                     </button>
                 </div>
             </div>
-            <div v-if="!showRoomDetails" class = "flex justify-center align-items-center">
-                <Floorplan v-on:select-room="setSelectedRoom"/>
+            <input type="number" min="1" max="7" v-model="best_room_id"/>
+            <div class = "flex justify-center align-items-center">
+                <Floorplan 
+                    v-on:select-room="setSelectedRoom"
+                    :best_room_id="best_room_id"
+                />
             </div>
         <RoomDetails2
             :room = "selectedRoom"
