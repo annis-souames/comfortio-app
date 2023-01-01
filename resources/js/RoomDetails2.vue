@@ -19,10 +19,15 @@
                     </template>
 
                     <template v-slot:chart2>
+
+                        <!-- <input type="text" min="1" max="100" v-model="data_arr" class="mt-5" ref="chart" />
+                        <p>{{ data_arr }}</p> -->
+
                         <LineChart
                             title="Temperature" units="°C"
                             color="#FFA600"
-                            :data="[13,13.8,12,14.5,13,15.2,14.5]"
+                            :data="data_arr"
+                            :labels="label_arr"
                         ></LineChart>
                     </template>
                 </PropDetails>
@@ -36,7 +41,8 @@
                         <LineChart
                             title="Humidity" units="%"
                             color="#58508D"
-                            :data = "[38,43,64,40,37,50,60.5]"
+                            :data="data_arr"
+                            :labels="label_arr"
                         ></LineChart>
                     </template>
                 </PropDetails>
@@ -50,7 +56,8 @@
                         <LineChart
                             title="Light" units="%"
                             color="#58508D"
-                            :data = "[38,43,64,40,37,50,60.5]"
+                            :data="data_arr"
+                            :labels="label_arr"
                         ></LineChart>
                     </template>
                 </PropDetails>
@@ -64,7 +71,8 @@
                         <LineChart
                             title="Sound" units="%"
                             color="#58508D"
-                            :data = "[38,43,64,40,37,50,60.5]"
+                            :data="data_arr"
+                            :labels="label_arr"
                         ></LineChart>
                     </template>
                 </PropDetails>
@@ -102,6 +110,8 @@ export default {
                 lighting: "current",
                 sound: "lighting",
             },
+            data_arr: [13, 13.8, 12, 14.5, 13, 15.2, 14.5],
+            label_arr: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         };
     },
     methods: {
