@@ -87,6 +87,69 @@
             <g
                 transform="translate(70.8 -14.7)"
                 id="g498">
+
+                <!-- ROOMS AND HOVER LOGIC -->
+                <g
+                    id="g496">
+                    <rect
+                        :class="best_room_id == 1 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="-68.8"
+                        y="16.7"
+                        width="56.9"
+                        height="35.6"
+                        @click="$emit('select-room',{id:1})"
+                        id="rect482" />
+                    <rect
+                        :class="best_room_id == 2 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="-11.9"
+                        y="16.7"
+                        width="64"
+                        height="35.6"
+                        @click="$emit('select-room',{id:2})"
+                        id="rect484" />
+                    <rect
+                        :class="best_room_id == 3 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="52.1"
+                        y="16.7"
+                        width="49.8"
+                        height="71.1"
+                        @click="$emit('select-room',{id:3})"
+                        id="rect486" />
+                    <rect
+                        :class="best_room_id == 4 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="-68.8"
+                        y="52.3"
+                        width="71.1"
+                        height="56.9"
+                        @click="$emit('select-room',{id:4})"
+                        id="rect488" />
+                    <rect
+                        :class="best_room_id == 5 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="2.32"
+                        y="52.3"
+                        width="49.8"
+                        height="85.3"
+                        @click="$emit('select-room',{id:5})"
+                        id="rect490" />
+                    <rect
+                        :class="best_room_id == 6 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="52.1"
+                        y="87.8"
+                        width="49.8"
+                        height="49.8"
+                        @click="$emit('select-room',{id:6})"
+                        id="rect492" />
+                    <rect
+                        :class="best_room_id == 7 ? 'fill-green-400 opacity-100 hover:opacity-60 transition ease-in-out duration-300' : 'fill-gray-300 opacity-0 hover:opacity-50 transition ease-in-out duration-300'"
+                        x="-68.8"
+                        y="109"
+                        width="71.1"
+                        height="28.4"
+                        @click="$emit('select-room',{id:7})"
+                        id="rect494" />
+                </g>
+
+                <!-- ROOMS' WALLS -->
                 <g
                     fill="none"
                     stroke="#000"
@@ -139,66 +202,7 @@
                             id="path476" />
                     </g>
                 </g>
-                <g
-                    id="g496">
-                    <rect
-                        fill-opacity="0.5"
-                        fill="green"
-                        x="-68.8"
-                        y="16.7"
-                        width="56.9"
-                        height="35.6"
-                        @click="$emit('select-room',{id:1})"
-                        id="rect482" />
-                    <rect
-                        fill-opacity="0"
-                        x="-11.9"
-                        y="16.7"
-                        width="64"
-                        height="35.6"
-                        @click="$emit('select-room',{id:2})"
-                        id="rect484" />
-                    <rect
-                        fill-opacity="0"
-                        x="52.1"
-                        y="16.7"
-                        width="49.8"
-                        height="71.1"
-                        @click="$emit('select-room',{id:3})"
-                        id="rect486" />
-                    <rect
-                        fill-opacity="0"
-                        x="-68.8"
-                        y="52.3"
-                        width="71.1"
-                        height="56.9"
-                        @click="$emit('select-room',{id:4})"
-                        id="rect488" />
-                    <rect
-                        fill-opacity="0"
-                        x="2.32"
-                        y="52.3"
-                        width="49.8"
-                        height="85.3"
-                        @click="$emit('select-room',{id:5})"
-                        id="rect490" />
-                    <rect
-                        fill-opacity="0"
-                        x="52.1"
-                        y="87.8"
-                        width="49.8"
-                        height="49.8"
-                        @click="$emit('select-room',{id:6})"
-                        id="rect492" />
-                    <rect
-                        fill-opacity="0"
-                        x="-68.8"
-                        y="109"
-                        width="71.1"
-                        height="28.4"
-                        @click="$emit('select-room',{id:7})"
-                        id="rect494" />
-                </g>
+                
             </g>
             <text
                 xml:space="preserve"
@@ -517,9 +521,12 @@
 <script>
 export default {
     name: "Floorplan",
+    props: [
+        'best_room_id'
+    ],
     data(){
         return {
-            rooms: []
+            rooms: [],
         }
     }
 }
