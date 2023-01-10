@@ -1,8 +1,12 @@
 <template>
     <div @wheel.prevent @touchmove.prevent @scroll.prevent class="flex flex-col items-center jufisty-center content-center border border-black rounded-sm m-3 w-[27rem] h-[27rem] bg-white relative overflow-x-hidden no-scrollbar">
-        <p class="text-xl mt-5 font-bold">
-            {{title}}
-        </p>
+        <div class = "inline-flex w-full items-center justify-between px-3">
+            <p class="text-xl mt-5 font-bold">
+                {{title}}
+            </p>
+
+        </div>
+
 
         <div class="relative h-3/4 flex items-center justify-center">
             <div class="chart1 absolute" :class='show_chart1 ? "active" : ""'>
@@ -37,8 +41,15 @@ export default {
     data() {
         return {
             show_chart1: true,
+            freq: "H"
         };
     },
+    methods:{
+        updateFrequency(f){
+            this.freq = f
+            this.$emit('frequency-change',{payload:this.freq})
+        }
+    }
 };
 </script>
 

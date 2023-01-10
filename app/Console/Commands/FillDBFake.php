@@ -16,7 +16,7 @@ class FillDBFake extends Command
      *
      * @var string
      */
-    protected $signature = 'fill:db {--n=}';
+    protected $signature = 'fill:db {--id=}';
 
     /**
      * The console command description.
@@ -32,18 +32,19 @@ class FillDBFake extends Command
      */
     public function handle()
     {
-        $number = (int)$this->option('n');
+
+        $id = (int)$this->option('id');
         $faker = Faker\Factory::create();
         $entries = collect();
-        for($i = 0; $i < $number ; $i++){
+        for($i = 0; $i < 60*24 ; $i++){
             $entries->push([
-                'RoomNo' => 'Room ' . array_rand([1,2,3,4,5,6]) + 1,
+                'RoomNo' => 'Room ' . $id,
                 'Temperature' => $faker->numberBetween(20,24),
                 'Humidity' => $faker->numberBetween(26,35),
                 'Pressure' => $faker->numberBetween(100000,102000),
                 'Light' => $faker->numberBetween(60,85),
                 'Sound' => $faker->numberBetween(220,290),
-                'timestamp' => new UTCDateTime($faker->dateTimeBetween('now', '+1 day'))
+                'timestamp' => new UTCDateTime(Carbon::now()->addMinutes($i)->getTimestamp())
             ]);
         //sleep(60);
         }

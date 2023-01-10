@@ -1,12 +1,15 @@
 <template>
+
     <div class = "w-[400px] h-[300px] relative mt-10">
-        <div class="flex flex-col gap-1 items-center justify-center w-full">
-            <p class="text-sm text-gray-500">Hours to display:</p>
-            <input type="range" :min="0" :max="this.data.length" v-on:input="setOption()" v-model="num" class="slider" ref="chart" />
+        <div class="flex flex-col gap-1 items-center justify-center w-full" >
+            <p class="text-sm text-gray-500">Last {{num}} {{frequencyString}} </p>
+            <input type="range" min="3" :max="maxRange" v-on:change="setOption()" v-model="num" class="slider" ref="chart" />
         </div>
 
-        <v-chart id="vchart"  :option="option"/>
+        <v-chart id="vchart" ref="chart" :option="option" />
+
     </div>
+
 
 </template>
 
@@ -44,6 +47,8 @@ export default {
         data: Array,
         labels: Array,
         color: String,
+        show: Boolean,
+        frequency: String
     },
     provide: {
         [THEME_KEY]: "light",
@@ -51,15 +56,18 @@ export default {
     data() {
         return {
             num: this.data.length,
-            option: null,
-        };
-    },
-    methods: {
-        setOption() {
-            this.option = ref({
+            option: {
                 xAxis: {
                     type: 'category',
-                    data: this.labels.slice(0, this.num),
+                    boundaryGap:false,
+                    axisLabel: {
+                        /*
+                        formatter: (function(value){
+                            return moment(value).format('HH:mm');
+                        })
+                        */
+
+                    }
                 },
                 yAxis: {
                     type: 'value'
@@ -71,16 +79,63 @@ export default {
                 series: [
                     {
                         name: this.title,
-                        data: this.data.slice(0, this.num),
+                        data: [],
                         type: 'line',
                         smooth: true
                     }
                 ],
                 color: this.color
-            });
-        },
+            }
+        };
     },
-    mounted() {
+    computed:{
+        maxRange(){
+            return this.frequency === 'H' ? 24 : 60
+        },
+        frequencyString(){
+            return this.frequency === 'H' ? 'hours':'minutes'
+        }
+    },
+    methods: {
+        setOption() {
+            this.option.color = this.color
+            this.option.series[0].data = this.data.slice(-1*this.num) ;
+        },
+        updateOptions(){
+            this.setOption()
+            return this.option
+        }
+    },
+    watch: {
+        show: function (old, newVal) {
+            /*
+            if (this.show) {
+                console.log("Data was loaded")
+                console.log(this.data)
+                this.setOption()
+
+            }
+            */
+
+        },
+        frequency: function(newVal,old){
+            this.num = 3
+            console.log(newVal)
+            this.$refs.chart.clear()
+            this.setOption()
+        },
+        data: function(newVal,old){
+            console.log("Data changed ")
+            console.log(newVal)
+            this.setOption()
+        }
+    },
+    mounted(){
+        this.setOption()
+    },
+    updated() {
+        console.log("Line chart data for "+ this.title)
+        console.log(this.data)
         this.setOption()
     },
 
@@ -162,4 +217,59 @@ export default {
   background: rgb(59 130 246);
   cursor: pointer;
 }
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+.loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 </style>

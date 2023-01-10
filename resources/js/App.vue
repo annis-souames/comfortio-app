@@ -41,13 +41,14 @@ export default {
                 {
                     id: 7,
                     name: 'Room 114',
-                    data: []
+                    data: [],
                 }
             ],
+            summary:[],
             selectedRoom: null,
             showFilterMenu: false,
             showRoomDetails: false,
-            best_room_id: 2,
+            best_room_id: 1,
         }
     },
     methods:{
@@ -109,7 +110,7 @@ export default {
             </div>
             <input type="number" min="1" max="7" v-model="best_room_id"/>
             <div class = "flex justify-center align-items-center">
-                <Floorplan 
+                <Floorplan
                     v-on:select-room="setSelectedRoom"
                     :best_room_id="best_room_id"
                 />
